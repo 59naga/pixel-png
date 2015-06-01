@@ -26,7 +26,7 @@ var file= 'https://59naga.github.io/fixtures/animated.PNG';
 pixelPng.parse(file).then(function(images){
   var i= 0;
 
-  console.log(images.loopCount); // 0(Infinite)
+  console.log(images.numPlays); // 0(Infinite)
 
   var nextImage= function(){
     var imageData= images[i++];
