@@ -2,7 +2,7 @@
 
 [![Sauce Test Status][sauce-image]][sauce]
 
-> Parse GIF to ImageData in cross-platform.
+> Parse PNG to ImageData in cross-platform.
 
 ## Installation
 ```bash
@@ -32,15 +32,15 @@ pixelPng.parse(file).then(function(images){
     var imageData= images[i++];
     if(imageData==null) return;
 
-    console.log(imageData.width, imageData.height, imageData.data.length);
+    console.log(imageData);
     nextImage();
   }
 
   nextImage();
 });
-// 73 73 21316
-// 73 73 21316
-// 73 73 21316
+// { width: 73, height: 73, left: 0, top: 0, delay: 1000, disposeOp: 0, blendOp: 0, data: <Uint8Array ..> }
+// { width: 14, height: 24, left: 48, top: 23, delay: 900, disposeOp: 2, blendOp: 1}
+// { width: 1, height: 1, left: 0, top: 0, delay: 800, disposeOp: 0, blendOp: 0}
 // ...
 ```
 
