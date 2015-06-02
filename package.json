@@ -1,6 +1,6 @@
 {
   "name": "pixel-png",
-  "version": "0.0.0-alpha.0",
+  "version": "0.0.0-alpha.1",
   "description": "Parse PNG to ImageData in cross-platform",
 
   "files": [
@@ -33,7 +33,7 @@
   "license": "MIT",
   "dependencies": {
     "apng-canvas-parser": "59naga/apng-canvas-parser",
-    "pixel-util": "0.0.0-alpha.4"
+    "pixel-util": "0.0.0-beta.2"
   },
   "devDependencies": {
     "brfs": "^1.4.0",
@@ -48,7 +48,7 @@
 
   "keywords": [
     "pixel",
-    "gif"
+    "png"
   ],
   "repository": {
     "type": "git",
