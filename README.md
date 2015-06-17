@@ -44,13 +44,15 @@ pixelPng.parse(file).then(function(images){
 // ...
 ```
 
-# See
-* [pixel](https://github.com/59naga/pixel/)
+# Related projects
 * [pixel-util](https://github.com/59naga/pixel-util/)
 * [pixel-gif](https://github.com/59naga/pixel-gif-/)
 * __pixel-png__
 * [pixel-jpg](https://github.com/59naga/pixel-jpg/)
 * [pixel-bmp](https://github.com/59naga/pixel-bmp/)
+* [pixel](https://github.com/59naga/pixel/)
+* [pixel-to-ansi](https://github.com/59naga/pixel-to-ansi/)
+* [pixel-to-svg](https://github.com/59naga/pixel-to-svg/)
 
 License
 ---

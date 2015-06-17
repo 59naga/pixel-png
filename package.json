@@ -1,6 +1,6 @@
 {
   "name": "pixel-png",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0-alpha.2",
   "description": "Parse PNG to ImageData in cross-platform",
 
   "files": [
@@ -12,12 +12,11 @@
   },
 
   "scripts": {
-    "start": "jasminetea test --verbose --watch",
+    "start": "jasminetea --watch",
     "localhost": "zuul test/api.spec --local 59798 --open",
 
-    "cover": "jasminetea test --verbose --cover --report",
-    "test": "npm run cover",
-    "posttest": "zuul test/api.spec && echo Perfect posttest || echo Ignored posttest",
+    "test": "jasminetea --cover --report --lint",
+    "test-cloud": "zuul test/api.spec",
 
     "prepublish": "node -e \"if(process.env.TRAVIS){}else{process.exit(1)}\" && npm run compile || echo skip prepublish",
     "compile": "coffee --bare --compile index.coffee",
@@ -25,15 +24,15 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run cover"
+      "pre-commit": "npm test"
     }
   },
   
   "author": "59naga <i59naga@icloud.com> (http://berabou.me)",
   "license": "MIT",
   "dependencies": {
-    "apng-canvas-parser": "59naga/apng-canvas-parser",
-    "pixel-util": "0.0.0-beta.2"
+    "apng-canvas-parser": "git://github.com/59naga/apng-canvas-parser.git#727a15dcea6a070569e3b331966f4e3fd92d3a6c",
+    "pixel-util": "0.0.0-beta.3"
   },
   "devDependencies": {
     "brfs": "^1.4.0",
@@ -41,8 +40,7 @@
     "coffeeify": "^1.1.0",
     "fixture-images": "^0.1.3",
     "ghooks": "^0.3.2",
-    "jasminetea": "^0.2.0-beta.1",
-    "object-parser-cli": "0.0.0",
+    "jasminetea": "^0.2.1-alpha.2",
     "zuul": "^3.0.0"
   },
 
@@ -52,10 +50,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/59naga/pixel-gif.git"
+    "url": "git+https://github.com/59naga/pixel-png.git"
   },
   "bugs": {
-    "url": "https://github.com/59naga/pixel-gif/issues"
+    "url": "https://github.com/59naga/pixel-png/issues"
   },
-  "homepage": "https://github.com/59naga/pixel-gif#readme"
+  "homepage": "https://github.com/59naga/pixel-png#readme"
 }
